@@ -19,4 +19,20 @@
 .container-search {
     align-items: center;
     display: flex;
+    button {
+        margin-bottom: 24px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .list {
+        width: 70%
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        width: 80%
+    }
 }
