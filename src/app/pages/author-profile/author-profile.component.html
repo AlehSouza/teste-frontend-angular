@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="main">
+        <div class="user-actions">
+            <button mat-fab extended (click)="goBack()">
+                <mat-icon>arrow_back_ios</mat-icon>
+                Voltar
+            </button>
+        </div>
+        <div class="profile" *ngIf="author">
+            <p><b>{{author.name}}</b></p>
+            <p><b>Email: </b>{{author.email}}</p>
+            <p><b>Telefone: </b>{{author.phone}}</p>
+            <p><b>Endereço: </b>{{author.address.street}}, {{author.address.suite}} - {{author.address.zipcode}} -
+                {{author.address.city}} </p>
+
+            <br />
+
+            <p><b>Empresa: </b>{{author.company.name}}</p>
+        </div>
+        <div class="posts">
+            <app-post class="author-posts" *ngFor=" let post of posts" [post]="post"></app-post>
+        </div>
+    </div>
+</div>

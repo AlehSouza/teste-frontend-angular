@@ -1,0 +1,29 @@
+.main {
+    background-color: #F9F9F9;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.profile {
+    background-color: #ff4081;
+    color: white;
+    padding: 40px 80px;
+}
+
+.posts {
+    padding: 40px;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+
+    .author-posts {
+        width: 18%;
+    }
+}
+
+.user-actions {
+    width: 28%;
+    padding: 12px;
+}

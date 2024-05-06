@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="user-actions">
+        <button mat-fab extended (click)="goBack()">
+            <mat-icon>arrow_back_ios</mat-icon>
+            Voltar
+        </button>
+    </div>
+    
+    <div class="main">
+        <app-post [post]="post"></app-post>
+
+        <mat-card class="comment create">
+            <mat-form-field>
+                <mat-label>Comentário</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+            <button mat-fab extended>
+                Comentar
+            </button>
+        </mat-card>
+
+        <mat-card class="comment" *ngFor="let comment of comments">
+            <mat-card-header>
+                <mat-card-title class="title">{{comment.name}}</mat-card-title>
+                <mat-card-subtitle class="title">{{comment.email}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{comment.body}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="main" *ngIf="!post">
+        publicação não encontrada gstv
+    </div>
+</div>

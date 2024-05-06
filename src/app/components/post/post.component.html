@@ -1,0 +1,24 @@
+<mat-card class="card" *ngIf="post">
+    <mat-card-header [routerLink]="['/author', post.userId]" class="hoverEffect">
+        <div mat-card-avatar id="profile-image"></div>
+        <mat-card-title>{{getAuthor(post.userId)}}</mat-card-title>
+        <mat-card-subtitle>Escritor</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="getPostImage()" alt="Imagem do Post" [routerLink]="['/post', post.id]">
+    <mat-card-content id="card-content" >
+        <mat-card-title id="title">
+            {{post.title}}
+        </mat-card-title>
+        <p id="card-content" [routerLink]="['/post', post.id]">
+            {{post.body}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions align="end" id="card-actions" [routerLink]="['/post', post.id]">
+        <button mat-mini-fab aria-label="Comentário" >
+            <mat-icon>comment</mat-icon>
+        </button>
+        <button mat-mini-fab aria-label="Compartilhar">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,52 @@
+.container {
+    width: auto;
+    min-height: 100%;
+    background-color: #F9F9F9;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.main {
+    width: 28%;
+    padding: 20px;
+}
+
+.user-actions {
+    width: 28%;
+    padding: 12px;
+}
+
+.create {
+    padding: 12px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+#card-content {
+    text-transform: capitalize;
+    padding-top: 14px;
+}
+
+#card-actions {
+    padding: 20px;
+    gap: 16px;
+}
+
+#profile-image {
+    background-image: url('https://avatars.githubusercontent.com/u/43255955?v=4');
+    background-size: cover;
+}
+
+.title {
+    text-transform: capitalize;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.comment {
+    border-top: 4px solid #ff4081;
+    margin-bottom: 16px;
+}
